@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Joseph Hart | Business Analytics & Finance</title>
+<style>
+:root{--bg:#f6f7f9;--fg:#14213d;--muted:#5a6578;--card:#fff;--line:#dfe3ea;--accent:#c8913a;--hero:#14213d;--herofg:#f6f7f9;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1524;--fg:#e8ecf3;--muted:#98a3b8;--card:#17203a;--line:#26314f;--accent:#e0a64e;--hero:#17203a;--herofg:#e8ecf3}}
+:root[data-theme="dark"]{--bg:#0e1524;--fg:#e8ecf3;--muted:#98a3b8;--card:#17203a;--line:#26314f;--accent:#e0a64e;--hero:#17203a;--herofg:#e8ecf3}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 Georgia,"Times New Roman",serif}
+h1,h2,h3,.sans{font-family:"Helvetica Neue",Arial,sans-serif}
+.wrap{max-width:920px;margin:0 auto;padding:0 22px}
+header.hero{background:var(--hero);color:var(--herofg);padding:72px 0 64px}
+.eyebrow{font:600 12px/1 "Helvetica Neue",Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+h1{font-size:clamp(38px,8vw,68px);line-height:1.02;margin:14px 0 18px;letter-spacing:-.02em}
+.statement{font-size:clamp(19px,3vw,25px);line-height:1.4;max-width:680px;border-left:3px solid var(--accent);padding-left:18px;margin:0 0 26px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px;padding:0;list-style:none}
+.tags li{font:500 13px "Helvetica Neue",Arial,sans-serif;border:1px solid rgba(255,255,255,.28);border-radius:99px;padding:6px 13px}
+.btn{display:inline-block;font:600 14px "Helvetica Neue",Arial,sans-serif;background:var(--accent);color:#14213d;text-decoration:none;padding:12px 20px;border-radius:6px;margin:0 8px 8px 0}
+.btn.alt{background:transparent;color:var(--herofg);border:1px solid rgba(255,255,255,.4)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);background:var(--card);border-bottom:1px solid var(--line);z-index:5}
+nav .wrap{display:flex;gap:18px;overflow-x:auto;padding-top:12px;padding-bottom:12px;white-space:nowrap}
+nav a{font:600 13px "Helvetica Neue",Arial,sans-serif;color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--accent)}
+section{padding:54px 0 6px}
+h2{font-size:28px;margin:0 0 6px;letter-spacing:-.01em}
+h2::after{content:"";display:block;width:44px;height:3px;background:var(--accent);margin-top:10px}
+.lead{color:var(--muted);margin:14px 0 24px;max-width:640px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px}
+.card h3{font-size:17px;margin:0 0 8px}
+.card p{margin:0;font-size:15px;color:var(--muted)}
+.num{font:700 13px "Helvetica Neue",Arial,sans-serif;color:var(--accent);letter-spacing:.1em}
+.sar dl{margin:10px 0 0;font-size:14.5px}
+.sar dt{font:700 11px "Helvetica Neue",Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-top:10px}
+.sar dd{margin:2px 0 0;color:var(--muted)}
+.skills h3{font-size:14px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 10px}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chips span{font:500 13px "Helvetica Neue",Arial,sans-serif;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:5px 10px}
+.tl{border-left:2px solid var(--line);margin:0;padding:0 0 0 22px;list-style:none}
+.tl li{position:relative;margin-bottom:26px}
+.tl li::before{content:"";position:absolute;left:-29px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.tl .when{font:600 12px "Helvetica Neue",Arial,sans-serif;color:var(--accent);letter-spacing:.08em;text-transform:uppercase}
+.tl h3{margin:2px 0 4px;font-size:18px}
+.tl p{margin:0;color:var(--muted);font-size:15px}
+.two{display:grid;gap:34px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));align-items:start}
+.two h3.col{font:700 13px "Helvetica Neue",Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 20px}
+.pdf{width:100%;height:760px;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+.pdf-note{color:var(--muted);font:14px "Helvetica Neue",Arial,sans-serif;padding:20px}
+button.btn{border:0;cursor:pointer}
+.contact{background:var(--hero);color:var(--herofg);border-radius:12px;padding:34px;margin:54px 0 0}
+.contact h2{color:var(--herofg)}
+.contact a.btn{margin-top:8px}
+footer{padding:30px 0 40px;text-align:center;color:var(--muted);font:13px "Helvetica Neue",Arial,sans-serif}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+<div class="eyebrow">Personal Brand Portfolio · 2026</div>
+<h1>Joseph Hart</h1>
+<p class="statement">I help organizations turn complex data into confident financial and operational decisions through analytics, financial modeling, and hands-on leadership.</p>
+<ul class="tags"><li>MBA, Business Analytics</li><li>Python · SQL · Excel</li><li>Financial Modeling</li><li>Team Leadership</li></ul>
+<a class="btn" href="#contact">Let's connect</a><a class="btn alt" href="#proof">See the proof</a><a class="btn alt" href="#resume">View résumé</a>
+</div></header>
+<nav><div class="wrap"><a href="#about">About</a><a href="#value">Value</a><a href="#proof">Accomplishments</a><a href="#skills">Skills</a><a href="#path">Path</a><a href="#resume">Résumé</a><a href="#contact">Contact</a></div></nav>
+<main class="wrap">
+
+<section id="about"><h2>About</h2>
+<p class="lead">Quantitative by training, people-first by habit.</p>
+<p>I'm an MBA candidate in Business Analytics at Seton Hall University's Stillman School of Business, where I also earned my BBA in Economics &amp; Wealth Management (cum laude, 3.6 GPA) in 2026. As a PCSS IT Graduate Assistant, I oversee more than 60 student workers and manage the tracking and lifecycle of the university's technology assets. I use Python, SQL, and Excel to turn raw service data into forecasts, dashboards, and budget recommendations for senior leadership.</p>
+<p>My experience spans data analysis, financial modeling, and team leadership. I have led audits, mentored student teams as Head Sacristan, and directed philanthropic initiatives for a 50+ member fraternity. I was also selected for the Travis Manion Foundation Leadership Program.</p>
+</section>
+
+<section id="value"><h2>What I Bring to Your Team</h2>
+<p class="lead">My value proposition, in three parts.</p>
+<div class="grid">
+<div class="card"><div class="num">01</div><h3>Analysis that drives action</h3><p>I query, clean, and model data with Python, SQL, and Excel, then translate it into recommendations leaders can use for budget and procurement decisions.</p></div>
+<div class="card"><div class="num">02</div><h3>Financial discipline</h3><p>From forecasting hardware replacement cycles to daily payment reconciliation, I treat numbers as accountability, not just reporting.</p></div>
+<div class="card"><div class="num">03</div><h3>Leadership at scale</h3><p>I oversee 60+ student workers across IT and mentor smaller teams, building accountability and collaboration in fast-moving settings.</p></div>
+</div></section>
+
+<section id="proof"><h2>Key Accomplishments</h2>
+<p class="lead">Situation, action, result.</p>
+<div class="grid sar">
+<div class="card"><h3>Promoted to Graduate Assistant</h3><dl><dt>Situation</dt><dd>PC Support Services needed stronger oversight of IT asset tracking and reporting.</dd><dt>Action</dt><dd>I took on expanded responsibility for tracking, reporting, and process improvement.</dd><dt>Result</dt><dd>I now oversee 60+ student workers across all IT divisions.</dd></dl></div>
+<div class="card"><h3>Automated Reporting</h3><dl><dt>Situation</dt><dd>Asset and service reports were recurring and manual.</dd><dt>Action</dt><dd>I built Python and SQL workflows to query, clean, and analyze the data.</dd><dt>Result</dt><dd>My automated reports now surface trends in equipment lifecycle and utilization.</dd></dl></div>
+<div class="card"><h3>Hardware Forecasting Models</h3><dl><dt>Situation</dt><dd>Leadership needed a basis for budget and procurement planning.</dd><dt>Action</dt><dd>I built Excel financial models forecasting hardware replacement cycles.</dd><dt>Result</dt><dd>My models now support budget allocation and procurement decisions.</dd></dl></div>
+<div class="card"><h3>Cross-Functional Audits</h3><dl><dt>Situation</dt><dd>Inventory data had discrepancies threatening accuracy and compliance.</dd><dt>Action</dt><dd>I coordinated audits and inventory checks, tracking milestones in JIRA.</dd><dt>Result</dt><dd>I corrected the discrepancies and reduced audit turnaround time.</dd></dl></div>
+<div class="card"><h3>Team Leadership as Head Sacristan</h3><dl><dt>Situation</dt><dd>The University Chapel needed reliable scheduling, budgeting, and event logistics.</dd><dt>Action</dt><dd>I led, scheduled, and mentored a team of 6 and managed the operating budget.</dd><dt>Result</dt><dd>I was the primary event contact for three years and kept resources aligned with institutional priorities.</dd></dl></div>
+</div></section>
+
+<section id="skills"><h2>Skills Toolkit</h2>
+<p class="lead">&nbsp;</p>
+<div class="card skills">
+<h3>Data &amp; Technology</h3><div class="chips"><span>Python</span><span>SQL</span><span>STATA</span><span>Excel (Advanced)</span><span>JIRA</span><span>Dashboards</span><span>Data Visualization</span></div>
+<h3 style="margin-top:18px">Financial &amp; Analytical</h3><div class="chips"><span>Financial Modeling</span><span>Forecasting</span><span>Budgeting</span><span>Econometrics</span><span>Predictive Modeling</span><span>Internal Auditing</span></div>
+<h3 style="margin-top:18px">Business &amp; Strategy</h3><div class="chips"><span>Business Analytics</span><span>Project Management</span><span>Process Improvement</span><span>Strategic Planning</span><span>Stakeholder Communication</span></div>
+<h3 style="margin-top:18px">Brand &amp; Marketing</h3><div class="chips"><span>Brand Audit</span><span>Personal Branding</span><span>Value Proposition Development</span></div>
+</div></section>
+
+<section id="path"><h2>My Path</h2>
+<div class="two">
+<div><h3 class="col">Professional</h3>
+<ul class="tl">
+<li><div class="when">Aug 2026 – Present</div><h3>PCSS IT Graduate Assistant</h3><p>I oversee 60+ student workers at Seton Hall's PC Support Services and build models, dashboards, and automated reports for senior leadership.</p></li>
+<li><div class="when">Aug 2024 – Aug 2026</div><h3>Asset Management Assistant</h3><p>I managed a portfolio of technology assets, ran audits, and delivered reports that informed budget and procurement decisions.</p></li>
+<li><div class="when">May 2024 – Aug 2025</div><h3>Golf Ranger</h3><p>At Bergen County Parks &amp; Recreation, I provided customer service, collected daily payments, and reconciled the budget.</p></li>
+<li><div class="when">May 2023 – May 2026</div><h3>Head Sacristan</h3><p>With Seton Hall Campus Ministry, I led a team of 6 and managed the University Chapel's budget and event logistics.</p></li>
+</ul></div>
+<div><h3 class="col">Academic</h3>
+<ul class="tl">
+<li><div class="when">2026 – 2027 (expected May 2027)</div><h3>MBA, Business Analytics</h3><p>At Stillman School of Business, Seton Hall University, I'm building skills in data-driven strategy, predictive modeling, Python and SQL, and financial modeling.</p></li>
+<li><div class="when">2022 – 2026</div><h3>BBA, Economics &amp; Wealth Management</h3><p>I graduated cum laude with a 3.6 GPA, made the Dean's List every semester, joined the Economics Honor Society, and served as VP of Social Development &amp; Philanthropy for Phi Kappa Theta.</p></li>
+</ul></div>
+</div></section>
+
+<section id="resume"><h2>Résumé</h2>
+<p class="lead">Save a copy of my résumé.</p>
+<p><button class="btn" id="dl" type="button">Download résumé (PDF)</button></p>
+</section>
+<div class="contact" id="contact">
+<h2>Let's Talk</h2>
+<p>I'm seeking a high-impact role in finance, operations, or business analytics, and I'd welcome a conversation.</p>
+<a class="btn" href="mailto:Jhart2527@gmail.com">Email me</a>
+<a class="btn alt" href="https://linkedin.com/in/joseph-hart2527">LinkedIn</a>
+<a class="btn alt" href="#resume">Résumé</a>
+</div>
+</main>
+<footer>Joseph Hart · Waldwick, NJ · Portfolio 2026<br>This website was developed with the assistance of Claude AI.</footer>
+<script>
+(function(){var u='/_blob/8e8205de6c1ec3f3992a0bc5eef24e31',b=document.getElementById('dl');if(!b)return;
+b.addEventListener('click',async function(){
+try{var d=window.claude&&await window.claude.use('downloads');
+if(d){var r=await fetch(u);var bl=await r.blob();await d.save({filename:'Joseph_Hart_Resume.pdf',data:bl});return;}}catch(e){}
+window.open(u,'_blank');});})();
+</script>
+</body>
+</html>
